@@ -6,11 +6,11 @@ class Home extends React.Component {
   render() {
     return(
       <div>
-        <Header pag="home" styleHome="home" />
+        {/* <Header pag="home" styleHome="home" /> */}
         <SectionHome />
         <footer>
           <a href="https://www.instagram.com/digas.oficial/" target='_blank'>
-            <p>Desenvolvido por <strong>Dihrey Araujo</strong></p>
+            Desenvolvido por <strong>Dihrey Araujo</strong>
           </a>
         </footer>
       </div>

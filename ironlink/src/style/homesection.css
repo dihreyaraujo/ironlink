@@ -1,5 +1,7 @@
 @import url('../font/stylesheet.css');
 
+/* HOME */
+
 .container-section-home {
   display: flex;
   justify-content: space-between;
@@ -62,4 +64,74 @@ footer > a {
   font-family: "Roboto", sans-serif;
   cursor: pointer;
   text-decoration: none;
+}
+
+/* SOBRE */
+
+.pabout {
+  text-align: justify;
+}
+
+.container-sobre {
+  margin: auto;
+  margin-top: 80px;
+  width: 50vw;
+}
+
+.container-sobre > h1 {
+  font-size: 3em;
+  font-family: "Wudoo Mono", sans-serif;
+  margin-bottom: 40px;
+}
+
+.container-sobre > p {
+  font-size: 1.2em;
+  line-height: 30px;
+}
+
+/* CURSOS */
+
+.cursoh {
+  font-family: "Wudoo Mono", sans-serif;
+  margin-bottom: 8px;
+}
+
+.container-cursos {
+  display: flex;
+}
+
+.container-geral-curso > h1 {
+  text-align: center;
+  margin: 15px 0 25px 0;
+}
+
+.container-curso {
+  width: 23vw;
+  margin: 0 10px 0px 18px;
+  background-color: rgba(0, 0, 0, 0.615);
+  padding: 20px 10px;
+  border-radius: 10px;
+}
+
+.container-curso p {
+  font-size: 0.9em;
+}
+
+.text-white {
+  color: white;
+}
+
+.h2p {
+  text-align: center;
+  margin-bottom: 15px;
+  line-height: 20px;
+}
+
+.bottom-curso {
+  display: flex;
+  margin-left: 20px;
+}
+
+.module {
+  margin-right: 80px;
 }

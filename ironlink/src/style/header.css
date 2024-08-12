@@ -2,6 +2,7 @@
 
 .imgHeader {
   width: 10vw;
+  cursor: pointer;
 }
 
 .main-header {
