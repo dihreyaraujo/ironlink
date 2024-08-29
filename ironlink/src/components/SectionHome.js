@@ -10,6 +10,7 @@ import Bronze from '../imagens/bronze.png';
 import Prata from '../imagens/prata.png';
 import Ouro from '../imagens/ouro.png';
 
+//comment
 
 class SectionHome extends React.Component {
 
