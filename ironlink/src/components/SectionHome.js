@@ -3,6 +3,13 @@ import '../style/homesection.css';
 import ImgHome from '../imagens/homeSection.png'
 import '../style/header.css';
 import Logo from '../imagens/logoFelipe.png';
+import Insta from '../imagens/instagram.png';
+import Whats from '../imagens/whatsapp.png';
+import Call from '../imagens/call.png';
+import Bronze from '../imagens/bronze.png';
+import Prata from '../imagens/prata.png';
+import Ouro from '../imagens/ouro.png';
+
 
 class SectionHome extends React.Component {
 
@@ -149,6 +156,69 @@ class SectionHome extends React.Component {
     )
   }
 
+  sectionContato = () => {
+    return(
+      <div className='container-social fadeIn'>
+          <div className='socialmedia'>
+            <img src={Insta} />
+            <p>@IronLink</p>
+          </div>
+          <div className='socialmedia'>
+            <img src={Whats} />
+            <p>(24)99953-5353</p>
+          </div>
+          <div className='socialmedia'>
+            <img src={Call} />
+            <p>(24)3334-9888</p>
+          </div>
+        </div>
+    )
+  }
+
+  sectionPromo = () => {
+    return(
+      <div className='container-promo fadeIn'>
+          <div className='container-medalha'>
+            <img className='medalha' src={Bronze} />
+            <h3 className='medalhah3'>Pacote Bronze</h3>
+            <p>Eletrodo revestido: R$1.500,00 - 5% = R$1.425,00</p>
+            <p>Arame tubular: R$2.000,00 – 5% = R$1.900,00</p>
+
+            <p>Total: R$3.325,00 (valor individual)</p>
+            <p>-VALOR PARA 10 PESSOAS  R$33.250,00 - 10% = R$ 29.925,00</p>
+            <p>-VALOR PARA 20 PESSOAS  R$66.500,00 - 25% = R$49.875,00</p>
+            <button className='buttonHome'>COMPRAR</button>
+          </div>
+          <div className='container-medalha'>
+            <img className='medalha' src={Prata} />
+            <h3 className='medalhah3'>Pacote Prata</h3>
+            <p>Eletrodo Revestido: R$1.500,00 - 10% = R$1.350,00</p>
+            <p>TIG: R$2.500,00 - 10% = R$2.250,00</p>
+            <p>MIG/MAG -2.000,00 - 10% = R$1.800,00</p>
+
+            <p>Total: R$5.400,00 (valor individual)</p>
+            <p>-VALOR PARA 10 PESSOAS R$54.000,00 - 10% = R$ 48.600,00</p>
+            <p>-VALOR PARA 20 PESSOAS R$108.000,00 - 25% = R$81.000,00</p>
+            <button className='buttonHome'>COMPRAR</button>
+          </div>
+          <div className='container-medalha'>
+            <img className='medalha' src={Ouro} />
+            <h3 className='medalhah3'>Pacote Ouro</h3>
+            <p>Tig 5G: R$2.500,00 - 20% = R$2.000,00</p>
+            <p>Mig/mag 3G: R$2.000,00 - 20% = R$1.600,00</p>
+            <p>Eletrodo revestido 4G: R$1.500,00 - 20% = R$1.200,00</p>
+            <p>Arame tubular 3G: R$2.000,00 - 20% = R$1.600,00</p>
+
+            <p>Total = R$6.400,00 (valor individual)</p>
+
+            <p>-VALOR PARA 10 PESSOAS R$64.000 - 10% = R$57.600,00</p>
+            <p>-VALOR PARA 20 PESSOAS R$128.000,00 - 25% = 96.000,00</p>
+            <button className='buttonHome'>COMPRAR</button>
+          </div>
+        </div>
+    )
+  }
+
   render() {
     const { page } = this.state
     return(
@@ -157,6 +227,8 @@ class SectionHome extends React.Component {
         { page === 'Home' && this.sectionHome() }
         { page === 'Sobre' && this.sectionSobre() }
         { page === 'Cursos' && this.sectionCursos() }
+        { page === 'Contato' && this.sectionContato() }
+        { page === 'Promoções' && this.sectionPromo() }
       </div>
     )
   }
