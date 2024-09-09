@@ -1,6 +1,9 @@
 import React from 'react';
 import '../style/homesection.css';
-import ImgHome from '../imagens/homeSection.png'
+import ImgHome from '../imagens/homeSection.png';
+import HomeImg from '../imagens/homeimage.jpg';
+import Homehome from '../imagens/homehome.jpg';
+
 import '../style/header.css';
 import Logo from '../imagens/logoFelipe.png';
 import Insta from '../imagens/instagram.png';
@@ -49,7 +52,7 @@ class SectionHome extends React.Component {
           <button className='buttonHome'>INSCREVA-SE</button>
         </div>
         <div>
-          <img className='imgHome' src={ ImgHome }/>
+          <img className='imgHome' src={ Homehome }/>
         </div>
       </div>
     )
