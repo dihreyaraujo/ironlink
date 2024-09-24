@@ -12,17 +12,36 @@ import Call from '../imagens/call.png';
 import Bronze from '../imagens/bronze.png';
 import Prata from '../imagens/prata.png';
 import Ouro from '../imagens/ouro.png';
+import Perfil from '../imagens/perfil.png';
 
 //comment
 
 class SectionHome extends React.Component {
 
   state = {
-    page: 'Home'
+    page: 'Home',
+    account: ''
   }
 
   selectPage = ({ target }) => {
-    this.setState({ page: target.innerText })
+    this.setState({ page: target.innerText });
+  }
+
+  perfilOnClick = () => {
+    const { account } = this.state;
+    if (account === '') {
+      this.setState({ page: 'Login' });
+    } else {
+      this.setState({ page: 'Perfil' });
+    }
+  }
+
+  entrarOnClick = () => {
+    this.setState({ page: 'Home', account: 'IronLink' });
+  }
+
+  eletrodoOnClick = () => {
+    this.setState({ page: "Eletrodo" });
   }
 
   header = () => {
@@ -36,6 +55,7 @@ class SectionHome extends React.Component {
           <p onClick={ (e) => this.selectPage(e) }>Cursos</p>
           <p onClick={ (e) => this.selectPage(e) }>Contato</p>
           <p onClick={ (e) => this.selectPage(e) }>Promoções</p>
+          <img onClick={ () => this.perfilOnClick() } className='perfilImage' src={ Perfil }/>
         </div>
       </div>
     )
@@ -75,7 +95,7 @@ class SectionHome extends React.Component {
       <div className='container-geral-curso fadeIn'>
         <h1 className='cursoh'>Cursos</h1>
         <div className='container-cursos'>
-          <div className='container-curso'>
+          <div className='container-curso' onClick={ () => this.eletrodoOnClick() }>
             <h2 className='text-white cursoh h2p'>Eletrodo Revestido</h2>
             <p className='text-white h2p'>O eletrodo revestido é um tipo de eletrodo amplamente utilizado em processos de soldagem elétrica, especialmente na soldagem de arco elétrico com eletrodo revestido (SMAW, na sigla em inglês). Consiste em uma haste metálica revestida por um material que, ao ser aquecido durante a soldagem, libera gases e cria uma camada protetora sobre o arco e o metal de solda. Este revestimento serve para estabilizar o arco, proteger a solda contra contaminação atmosférica e melhorar a qualidade da soldagem. O eletrodo revestido é valorizado pela sua versatilidade, facilidade de uso e capacidade de realizar soldagens em diferentes posições e tipos de metais.</p>
             <div className='bottom-curso'>
@@ -223,6 +243,124 @@ class SectionHome extends React.Component {
     )
   }
 
+  sectionLogin = () => {
+    return (
+      <div className='logincontainergeral fadeIn'>
+        <div className="login-page-container">
+          <form className="login-page-form">
+            <h2 className="login-page-title">Login</h2>
+        
+            <div className="login-page-input-container">
+              <label className="login-page-label" htmlFor="username">Usuário</label>
+              <input
+                type="text"
+                id="username"
+                className="login-page-input"
+              />
+            </div>
+            <div className="login-page-input-container">
+              <label className="login-page-label" htmlFor="password">Senha</label>
+              <input
+                type="password"
+                id="password"
+                className="login-page-input"
+              />
+            </div>
+            <button onClick={ () => this.entrarOnClick() } type="button" className="login-page-button">
+              Entrar
+            </button>
+            <p className="login-page-register-link">
+              Não tem uma conta? <a className="login-page-link">Registre-se</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    );
+  }
+
+  sectionPerfil = () => {
+    return (
+      <div className="profile-container fadeIn">
+        <div className="profile-card">
+          <h2 className="profile-title">Perfil</h2>
+          <div className="profile-info">
+            <p><strong>Nome:</strong> IronLinkADM</p>
+            <p><strong>Nascimento:</strong> 27/09/2024</p>
+            <p><strong>Plano:</strong> Ouro</p>
+            <p><strong>Cursos Adquiridos:</strong></p>
+            <ul>
+              <li>Eletrodo Revestido</li>
+              <li>TIG</li>
+              <li>MIG/MAG</li>
+              <li>Arame Tubular</li>
+            </ul>
+            <p><a className="profile-link">Acessar Certificados</a></p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  sectionEletrodo = () => {
+    return (
+      <div className="course-container fadeIn">
+        <h1 className="course-title">Eletrodo Revestido</h1>
+  
+        <div className="course-content">
+          {/* Módulos */}
+          <div className="course-modules">
+            <h3>Módulos</h3>
+            <ul className="module-list">
+              <li>Introdução</li>
+              <li>Avaliação I</li>
+              <li>Metrologia</li>
+              <li>Avaliação II</li>
+              <li>Teóricas</li>
+              <li>Avaliação III</li>
+              <li>Práticas</li>
+              <li>Avaliação IV</li>
+              <li>Desenho Técnico</li>
+              <li>Avaliação V</li>
+              <li>Conclusão</li>
+            </ul>
+          </div>
+  
+          {/* Vídeos */}
+          <div className="course-videos">
+            <div className="video-placeholder">
+              <div className="play-button"></div>
+            </div>
+            <div className="video-placeholder">
+              <div className="play-button"></div>
+            </div>
+          </div>
+  
+          {/* Descrição do curso */}
+          <div className="course-description">
+            <h3>Sobre o curso</h3>
+            <p>
+              O eletrodo revestido é um tipo de eletrodo amplamente utilizado em processos de soldagem elétrica,
+              especialmente na soldagem de arco elétrico com eletrodo revestido (SMAW, na sigla em inglês).
+              Consiste em uma haste metálica revestida por um material que, ao ser aquecido durante a soldagem,
+              libera gases e cria uma camada protetora sobre o arco e o metal de solda. Este revestimento serve
+              para estabilizar o arco, proteger a solda contra contaminação atmosférica e melhorar a qualidade da
+              soldagem. O eletrodo revestido é valorizado pela sua versatilidade, facilidade de uso e capacidade
+              de realizar soldagens em diferentes posições e tipos de metais.
+            </p>
+          </div>
+        </div>
+  
+        {/* Duração do curso e logo */}
+        <div className="course-footer">
+          <div className="course-duration">Duração do curso: 1 ano</div>
+          <div className="course-logo">
+            <img src={ Logo } alt="Logo do curso" />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   render() {
     const { page } = this.state
     return(
@@ -233,6 +371,9 @@ class SectionHome extends React.Component {
         { page === 'Cursos' && this.sectionCursos() }
         { page === 'Contato' && this.sectionContato() }
         { page === 'Promoções' && this.sectionPromo() }
+        { page === 'Login' && this.sectionLogin() }
+        { page === 'Perfil' && this.sectionPerfil() }
+        {page === 'Eletrodo' && this.sectionEletrodo() }
       </div>
     )
   }

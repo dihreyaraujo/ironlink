@@ -9,7 +9,7 @@ class Home extends React.Component {
         {/* <Header pag="home" styleHome="home" /> */}
         <SectionHome />
         <footer>
-          <a href="https://www.instagram.com/digas.oficial/" target='_blank'>
+          <a>
             Desenvolvido por <strong>Dihrey Araujo</strong>
           </a>
         </footer>
