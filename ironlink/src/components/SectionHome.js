@@ -111,7 +111,7 @@ class SectionHome extends React.Component {
               </div>
               <div>
                 <h3 className='text-white cursoh'>Preço</h3>
-                <p className='text-white'>R$200,00</p>
+                <p className='text-white'>R$1500,00</p>
               </div>
             </div>
           </div>
@@ -131,7 +131,7 @@ class SectionHome extends React.Component {
               </div>
               <div>
                 <h3 className='text-white cursoh'>Preço</h3>
-                <p className='text-white'>R$200,00</p>
+                <p className='text-white'>R$2500,00</p>
               </div>
             </div>
           </div>
@@ -151,7 +151,7 @@ class SectionHome extends React.Component {
               </div>
               <div>
                 <h3 className='text-white cursoh'>Preço</h3>
-                <p className='text-white'>R$200,00</p>
+                <p className='text-white'>R$2000,00</p>
               </div>
             </div>
           </div>
@@ -171,7 +171,7 @@ class SectionHome extends React.Component {
               </div>
               <div>
                 <h3 className='text-white cursoh'>Preço</h3>
-                <p className='text-white'>R$200,00</p>
+                <p className='text-white'>R$2000,00</p>
               </div>
             </div>
           </div>
